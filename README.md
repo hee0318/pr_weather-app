@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# 🧷 간단한 날씨 데이터로 리액트 다지기 🧷
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 프로젝트 생성
 
-## Available Scripts
+`npx create-react-app weather-app`
 
-In the project directory, you can run:
+### 필요한 패키지 생성
 
-### `npm start`
+`npm install axios`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### api 생성
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+OpenWeatherMap 사이트에서 API키를 얻는다.
 
-### `npm test`
+### 컴포넌트 설명
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+useState로 상태를 관리한다.
+FetchWeather를 사용해서 Api를 불러오는 비동기 함수.  
+handleSubmit을 사용해서 폼 제출하며 Api를 호출한다.  
+조건문사용 입력된 도시가 없는경우 에러 메세지를 표시하고, 데이터를 가져오는지를 확인단다.
 
-### `npm run build`
+### 이 예제는 함수 생성 및 호출, 변수 생성, 조건문 사용, API 호출 및 데이터 구조의 기본적인 사용법을 포함하는 예제입니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 공부한 내용
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+api호출 및 변수 생성 조건문 사용을 배울수 있었으며
+css의 초기설정을 다시한번 확인 하고 확실히 알수가 있었다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+- {
+  margin: 0;
+  padding: 0;
+  }
+.App {
+  width: 100wh;
+  height: 100vh;
+  padding: 0;
+}
+.container {
+  margin: 0 auto;
+  width: calc(100% - 200px);
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이처럼 부모 박스에서는 해당 화면의 전체값을 100vw, 100vh로 지정하고
+자식 박스에서 margin: 0 auto; 를 설정하고
+width: px 고정값을 지정해 주면 된다.
+```
