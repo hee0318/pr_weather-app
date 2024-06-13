@@ -50,3 +50,4 @@ css의 초기설정을 다시한번 확인 하고 확실히 알수가 있었다.
 width: px 고정값을 지정해 주면 된다.
 ```
 # pr-weather-app
+# pr_weather-app
