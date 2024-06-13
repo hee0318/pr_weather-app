@@ -1,38 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
-  text-align: center;
+  width: 100wh;
+  height: 100vh;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 0 auto;
+  width: calc(100% - 200px);
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrap {
+  margin: 0 auto;
+  width: 750px;
+  height: 600px;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 1px 1px 10px 0.5px #ccc;
+  /* box-shadow: inset 2px 1px 10px #ccc; */
+  border-radius: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.wrap .title {
+  margin: 15px;
+  padding: 2px 20px;
+  background-color: #e7eff0;
+  font-size: 1.5rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titleDesc {
+  color: #5264e9;
+  font-size: 0.8rem;
+  padding: 3px 20px;
+  margin-bottom: 10px;
+}
+.wrap input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.wrap button {
+  padding: 10px;
+  margin: 5px;
+  background-color: #def2f5;
+  border-radius: 5px;
+  border: 1px solid #b4c3c6;
+}
+.wrap button:hover {
+  background-color: #b4c3c6;
+  cursor: pointer;
+}
+.weatherResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weatherResult h2 {
+  padding: 10px;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+.weatherResult h2 span {
+  font-size: 0.9rem;
+}
+.weatherResult p {
+  padding: 5px;
 }
