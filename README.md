@@ -49,3 +49,4 @@ css의 초기설정을 다시한번 확인 하고 확실히 알수가 있었다.
 자식 박스에서 margin: 0 auto; 를 설정하고
 width: px 고정값을 지정해 주면 된다.
 ```
+# pr-weather-app
